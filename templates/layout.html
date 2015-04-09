@@ -1,0 +1,63 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+
+    <!-- все приколюхи для html файла дерни из папки с бойлерплейтом -->
+
+    <link rel="stylesheet" href="{% static "css/vendor.css" %}">
+
+    <!-- для продакшена не забудь расскомментировать -->
+    <link rel="stylesheet" href="{% static "css/custom.css" %}">
+
+    <!-- LESS на продакшене закомментировать -->
+    <!--<link  href="less/main.less" rel="stylesheet/less" type="text/css">-->
+
+
+</head>
+<body>
+    <!--[if lt IE 7]>
+    <p class="browsehappy">
+        Вы используете броузер, который <strong>больше не поддерживается</strong>.
+        Пожалуйста, <a href="http://browsehappy.com/">обновите ваш броузер</a>
+        и почувствуйте себя круто!
+    </p>
+    <![endif]-->
+
+    {%  block index %}{% endblock %}
+
+
+    <script src="{% static "js/vendor.js" %}"></script>
+
+    <script src="{% static "js/custom.js" %}"></script>
+
+   {% comment %} <script src="{% static "bower_components/jquery/dist/jquery.js" %}"></script>
+    <!--<script src="bower_components/boilerplate/assets/js/main.js"></script>-->
+    <script src="{% static "bower_components/jqueryui/jquery-ui.js" %}"></script>
+    <script src="{% static "bower_components/bootstrap/dist/js/bootstrap.js" %}"></script>
+
+
+
+    <script src="{% static "js/mainslider.js" %}"></script>
+    <script src="{% static "js/common.js" %}"></script>{% endcomment %}
+
+    <!-- Не забудь подключить сюда less.js -->
+    <!-- а на продакшене закомментировать -->
+    <!--<script src="bower_components/less/dist/less.js"></script>-->
+
+</body>
+</html>
